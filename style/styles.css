@@ -13,3 +13,24 @@
     position: absolute;
     width: 60px;
 }
+
+.card-button{
+    color: blue;
+    font-size: 40px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.card-button:hover{
+    color: red;
+    font-size: 45px;
+}
+
+
+.athor-main img{
+    width: 80px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin-right: 10px;
+}
