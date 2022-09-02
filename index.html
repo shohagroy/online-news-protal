@@ -18,6 +18,10 @@
     <link rel="stylesheet" href="style/styles.css" />
   </head>
   <body>
+    <!-- loading-spiner container -->
+    <div class="loading-spiner d-none">
+      <img src="images/ajax-loader.svg" alt="" />
+    </div>
     <header class="container-fluid">
       <!-- navbar -->
       <nav class="navbar navbar-expand-lg">
@@ -58,12 +62,19 @@
     </header>
 
     <!-- main section strat  -->
-    <main class="container-fluid bg-info">
+    <main class="container-fluid bg-light p-3">
       <!-- catagory container strat  -->
       <section
         class="category-container d-flex justify-content-center flex-wrap"
       >
         <!-- js control category  -->
+      </section>
+
+      <!-- item found alert container -->
+      <section>
+        <div class="bg-white m-2 container rounded rounded-3 alert-container">
+          <!-- js control  -->
+        </div>
       </section>
     </main>
     <!-- bootstrap js added link  -->

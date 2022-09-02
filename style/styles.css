@@ -1,0 +1,15 @@
+
+
+.loading-spiner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: sticky;
+    top: 40px;
+    z-index: 99;
+}
+
+.loading-spiner img{
+    position: absolute;
+    width: 60px;
+}
