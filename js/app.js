@@ -25,8 +25,8 @@ try {
             `
             mainCategotuDiv.appendChild(caragotyDiv);
         });
-        
         loadingSpiner.classList.add('d-none')
+
     }
 
     // display news 
