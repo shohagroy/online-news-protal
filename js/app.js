@@ -2,16 +2,17 @@
 // get loading-spiner
 const loadingSpiner = document.querySelector('.loading-spiner');
 loadingSpiner.classList.remove('d-none')
-
-// caragoty api call function 
-fetch('https://openapi.programming-hero.com/api/news/categories')
-    .then(res => res.json())
-    .then(data => displayCatagory(data.data.news_category))
-
-
     // get category container 
     const mainCategotuDiv = document.querySelector('.category-container');
 
+try {
+    // caragoty api call function 
+    fetch('https://openapi.programming-hero.com/api/news/categories')
+        .then(res => res.json())
+        .then(data => displayCatagory(data.data.news_category))
+  } catch (error) {
+    console.log(error)
+  }         
     // display catagoty function 
     displayCatagory = (categorys)=>{
         categorys.forEach(category => {
@@ -25,16 +26,18 @@ fetch('https://openapi.programming-hero.com/api/news/categories')
         
         loadingSpiner.classList.add('d-none')
     }
-    
-
 
     // display news 
     const displayNews = (category_id, caragoty_name)=>{
     loadingSpiner.classList.remove('d-none')
 
-        fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
+        try{
+            fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
             .then(res => res.json())
             .then(data => setDisplayNews(data.data))
+        }catch(error){
+            console.error(error)
+        }
 
             setDisplayNews = (allNews) =>{
                 document.querySelector('.alert-container').innerHTML = `
@@ -113,10 +116,18 @@ fetch('https://openapi.programming-hero.com/api/news/categories')
         }
     }
 
+    // modal open function 
     const openModel = (newsId) =>{
-        fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
+        loadingSpiner.classList.remove('d-none')
+
+        try{
+            fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
             .then(res => res.json())
             .then(data => DisplayFullNews(data.data))
+        }
+        catch(error){
+            console.log(error)
+        }
 
             const DisplayFullNews = (fullNews) =>{
 
@@ -159,8 +170,8 @@ fetch('https://openapi.programming-hero.com/api/news/categories')
                   </div>
                 </div>`
             }   
+        loadingSpiner.classList.add('d-none')
     }
-           
 
         
 
