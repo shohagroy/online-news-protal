@@ -60,7 +60,7 @@ try {
                
                 const singleCardDiv = document.createElement('div');
                 singleCardDiv.innerHTML = `
-            <div class="card mb-3 container-fluid">
+            <div class="card mb-3 container">
                 <div class="row g-0">
                     <div class="col-12 text-center col-md-4">
                         <img
