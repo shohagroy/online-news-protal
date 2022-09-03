@@ -5,6 +5,8 @@ loadingSpiner.classList.remove('d-none')
     // get category container 
     const mainCategotuDiv = document.querySelector('.category-container');
 
+
+    // error handelar 
 try {
     // caragoty api call function 
     fetch('https://openapi.programming-hero.com/api/news/categories')
@@ -31,6 +33,8 @@ try {
     const displayNews = (category_id, caragoty_name)=>{
     loadingSpiner.classList.remove('d-none')
 
+    
+    // error handeler
         try{
             fetch(`https://openapi.programming-hero.com/api/news/category/0${category_id}`)
             .then(res => res.json())
@@ -121,6 +125,8 @@ try {
     const openModel = (newsId) =>{
         loadingSpiner.classList.remove('d-none')
 
+
+        // error handelar 
         try{
             fetch(`https://openapi.programming-hero.com/api/news/${newsId}`)
             .then(res => res.json())
@@ -173,12 +179,3 @@ try {
             }   
         loadingSpiner.classList.add('d-none')
     }
-
-        
-
-
-
-    
-    
-
-    

@@ -40,6 +40,10 @@ a{
     margin-right: 10px;
 }
 
+.bloc-container{
+    background-color: rgba(255, 0, 0, 0.074);
+}
+
 footer{
     font-size: 20px;
 }
