@@ -68,7 +68,7 @@
     </header>
 
     <!-- main section strat  -->
-    <main class="container-fluid bg-light p-3">
+    <main class="container-fluid bg-light p-3" id="mian-section">
       <!-- catagory container strat  -->
       <section
         class="category-container d-flex justify-content-center flex-wrap"
@@ -98,8 +98,79 @@
       <!-- short section end  -->
 
       <!-- news card container startded  -->
-      <section class="news-card-container m-5"></section>
+      <section class="news-card-container m-5">
+        <!-- js control  -->
+      </section>
+
+      <!-- model container  -->
+      <section id="modal-div">
+        <div
+          class="modal fade"
+          id="staticBackdrop"
+          data-bs-backdrop="static"
+          data-bs-keyboard="false"
+          tabindex="-1"
+          aria-labelledby="staticBackdropLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">
+                  <h2 id="model-title"></h2>
+                </h5>
+              </div>
+              <div class="modal-body">
+                <div>
+                  <div class="w-100 text-center" id="image-container">
+                    <!-- js control  -->
+                  </div>
+                  <div>
+                    <p id="news-details" class="card-text py-3"></p>
+                  </div>
+                </div>
+              </div>
+
+              <hr />
+              <div
+                class="p-4 card-footer bg-transparent border-success"
+                id="modal-footer"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <!-- footer section  -->
+    <footer class="conrainer d-flex justify-content-between p-3 bg-dark">
+      <div>
+        <p class="text-white">Copyright 2021 Taza-News Oficial</p>
+      </div>
+      <div>
+        <a
+          href="https://www.facebook.com/shohagroy.7771/"
+          class="followers"
+          target="_blank"
+          ><i class="fa-brands fa-facebook"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/shohagroy.7771/"
+          class="followers"
+          target="_blank"
+          ><i class="fa-brands fa-square-instagram"></i
+        ></a>
+        <a
+          href="https://www.linkedin.com/in/shohag-roy-850a82236/"
+          class="followers"
+          target="_blank"
+          ><i class="fa-brands fa-linkedin"></i
+        ></a>
+        <a href="https://github.com/shohagroy" class="followers" target="_blank"
+          ><i class="fa-brands fa-square-github"></i
+        ></a>
+      </div>
+    </footer>
     <!-- bootstrap js added link  -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

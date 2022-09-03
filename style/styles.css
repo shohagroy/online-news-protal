@@ -29,8 +29,21 @@
 
 
 .athor-main img{
-    width: 80px;
+    width: 70px;
     border-radius: 50%;
     border: 2px solid black;
     margin-right: 10px;
+}
+
+footer{
+    font-size: 20px;
+}
+
+
+footer i{
+    color: white;
+}
+
+#mian-section{
+    min-height: 80vh;
 }
