@@ -53,6 +53,7 @@ try {
 
             allNews.forEach(news =>{
 
+               
                 const singleCardDiv = document.createElement('div');
                 singleCardDiv.innerHTML = `
             <div class="card mb-3 container-fluid">
@@ -66,9 +67,9 @@ try {
                     </div>
                     <div class="col-md-8">
                         <div class="card-body">
-                        <h5 class="card-title">
+                        <h3 class="card-title text-center">
                             ${news.title}
-                        </h5>
+                        </h3>
                         <p class="card-text">${news.details.slice(0, 500)}...</p>
                         
                         </div>
@@ -80,14 +81,14 @@ try {
                                 <img class="" src="${news.author.img}" alt="" />
                                 </div>
                                 <div>
-                                    <small>${news.author.name}</small> <br />
-                                    <small>${news.author.published_date}</small>
+                                    <small>${news.author.name ? news.author.name : "No Data Found" }</small> <br />
+                                    <small>${news.author.published_date ? news.author.published_date : "No data Found"}</small>
                                 </div>
                             </div>
 
                         <div>
                                 <i class="fa-solid fa-eye"></i>
-                                <small>${news.total_view}K</small>
+                                <small>${news.total_view ? news.total_view : 0}K</small>
                         </div>
 
                         <div class="d-none d-md-block">
